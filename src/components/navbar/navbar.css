@@ -1,0 +1,168 @@
+.opentask__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+
+.opentask__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.opentask__navbar-links_logo {
+  margin-right: 5rem;
+}
+
+.opentask__navbar-links_logo img {
+  width: 140px;
+  height: 55px;
+}
+
+.opentask__navbar-links_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.opentask__navbar-links_container p a:hover {
+  transition: color 0.2s;
+}
+
+.opentask__navbar-links_container p a:hover {
+  color: var(--color-subtext);
+}
+
+.opentask__navbar-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.opentask__navbar-links_container p,
+.opentask__navbar-sign p .opentask__navbar-menu_container p {
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.opentask__navbar-sign #signUp,
+.opentask__navbar-menu_container #signUp,
+.opentask__navbar-sign #logIn,
+.opentask__navbar-menu_container #logIn {
+  padding: 0.5rem 1rem;
+  background: #ff4820;
+  border-radius: 30px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #ff4820;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.opentask__navbar-sign #signUp:hover,
+.opentask__navbar-menu_container #signUp:hover {
+  background: #bc2402;
+  border: 2px solid #bb2200;
+}
+
+.opentask__navbar-sign #logIn,
+.opentask__navbar-menu_container #logIn {
+  background: none;
+  border: 2px solid #fff;
+}
+
+.opentask__navbar-sign #logIn:hover,
+.opentask__navbar-menu_container #logIn:hover {
+  background: #ffffff;
+  color: rgb(10, 10, 10);
+}
+
+.opentask__navbar-menu {
+  margin-left: 1rem;
+
+  display: none;
+  position: relative;
+}
+
+.opentask__navbar-menu svg {
+  cursor: pointer;
+}
+
+.opentask__navbar-menu_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  background: var(--color-footer);
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.opentask__navbar-menu_container p {
+  margin: 1rem 0;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.opentask__navbar-menu_container-links-sign {
+  display: none;
+}
+
+@media screen and (max-width: 1067px) {
+  .opentask__navbar-links_container {
+    display: none;
+  }
+
+  .opentask__navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .opentask__navbar {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .opentask__navbar {
+    padding: 2rem;
+  }
+
+  .opentask__navbar-sign {
+    display: none;
+  }
+
+  .opentask__navbar-menu_container {
+    top: 20px;
+  }
+
+  .opentask__navbar-menu_container-links-sign {
+    display: block;
+  }
+
+  .opentask__navbar-sign #signUp,
+  .opentask__navbar-menu_container #signUp,
+  .opentask__navbar-sign #logIn,
+  .opentask__navbar-menu_container #logIn {
+    margin: 0.5rem 0;
+  }
+}
